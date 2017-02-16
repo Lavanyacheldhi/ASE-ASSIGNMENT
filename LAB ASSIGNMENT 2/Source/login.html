@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<<<<<<< HEAD
+    <meta characterset="utf-8">
+=======
+    <meta t="utf-8">
+>>>>>>> origin/master
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Direct</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.1/angular.min.js"
+            type="application/javascript"></script>
+<<<<<<< HEAD
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="130181898161-a79ejqdq34igtjv4i8adlus02ddgfk0p.apps.googleusercontent.com">
+=======
+
+>>>>>>> origin/master
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/form-elements.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="css/creative.min.css" rel="stylesheet">
+
+    <script type="text/javascript">
+<<<<<<< HEAD
+=======
+        var valid = false;
+>>>>>>> origin/master
+
+        function validate() {
+            var msg = "";
+
+            var uname = document.myForm.userName.value;
+            var pwd = document.myForm.pwd.value;
+            if (uname.length == 0 && pwd.length == 0)
+                msg = msg + "Please enter username and password \n";
+            else if (pwd.length == 0)
+                msg = msg + "Please enter password \n";
+            else if (uname.length == 0)
+                msg = msg + "Please enter username \n";
+
+            if (msg.length > 0) {
+                window.alert(msg);
+                valid = false;
+            }
+            else
+                valid = true;
+            return valid;
+        }
+<<<<<<< HEAD
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+            console.log('Email: ' + profile._evalUrl("http://localhost:63342/Source/home.html"));
+        }
+        function LoginController($scope) {
+            $scope.logins = [];
+            $scope.login = function (user, pwd) {
+                localStorage.setItem("password", pwd);
+                localStorage.setItem("username", user);
+                $scope.logins.push(localStorage.getItem("name") + " was logged in.");
+            };
+        }
+
+=======
+    </script>
+>>>>>>> origin/master
+
+</head>
+<body ng-app ng-controller="LoginController" class="about">
+<div class="container">
+    <div class="row">
+        <div class="form-module">
+            <div class="form-top">
+                <div class="form-top-left">
+                    <h3><b>Welcome to our site</b></h3>
+                    <p style="color:black">Enter username and password to log on</p>
+                </div>
+                <div class="form-top-right">
+                    <i class="fa fa-key"></i>
+                </div>
+            </div>
+            <div class="form-bottom">
+                <form role="form" name="myForm" onsubmit="return validate()" method="post" class="login-form"
+                      action="home.html">
+                    <div class="form-group">
+                        <label class="sr-only">Username</label>
+                        <input ng-model="user.firstName" type="text" placeholder="Username..."
+                               class="form-username form-control" name="userName">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only">Password</label>
+                        <input ng-model="user.pwd" type="password" placeholder="Password..."
+                               class="form-password form-control" name="pwd">
+                    </div>
+                    <button type="submit" ng-click="login(user.firstName, user.pwd)" value="Sign in" class="btn">Sign in
+                    </button>
+                    <br/> <br/>
+                    <!--</div>-->
+                    Not yet Member?<a href="register.html"> <b>Click here to register</b></a>
+                </form>
+            </div>
+<<<<<<< HEAD
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+=======
+>>>>>>> origin/master
+            <a href="index.html"> <u><b>Back to home page</b></u></a>
+        </div>
+    </div>
+</div>
+<<<<<<< HEAD
+=======
+<script>
+    function LoginController($scope) {
+        $scope.logins = [];
+        $scope.login = function (user, pwd) {
+            localStorage.setItem("password", pwd);
+            localStorage.setItem("username", user);
+            $scope.logins.push(localStorage.getItem("name") + " was logged in.");
+        };
+    }
+</script>
+>>>>>>> origin/master
+</body>
+</html>
